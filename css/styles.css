@@ -54,6 +54,14 @@ ul {
     font-style: normal;
     margin-top: 20px;
 }
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons-main-color);
+}
+
 /*--END Обязатектаельный сброс в начале нового проекта--*/
 .container {
   padding-left: 15px;
@@ -345,6 +353,7 @@ margin-bottom: 10px;
   flex-basis: calc(100% / 4 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
   box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 4px 4px;
 }
 .card-set .item-third {
   /* outline: 1px solid green; */
