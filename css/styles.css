@@ -183,9 +183,6 @@ ul, ol {margin:0; padding: 0;}
 .active-link {
   color: var(--accent-color);
 }
-.navigation-list {
-  
-}
 
 .navigation-list .list {
   text-align: center;
