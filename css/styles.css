@@ -12,7 +12,7 @@
   --icons-color: #afb1b8;
   --light-bg-color: #f5f4fa;
   --card-set-gap: 30px;
-
+  --icons-default-color: #afb1b8;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
   0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -41,11 +41,12 @@ h3,
 h4,
 h5,
 h6,
-p,
-ul {
+p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+ul, ol {margin:0; padding: 0;}
 
 .list {
   list-style: none;
@@ -59,7 +60,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: var(--icons-main-color);
+  fill: var(--icons-default-color);
 }
 
 /*--END Обязатектаельный сброс в начале нового проекта--*/
@@ -91,8 +92,6 @@ ul {
   background: var(--white-color);
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid #ececec;
 }
 .header .container {
@@ -106,6 +105,7 @@ ul {
 .nav-menu-list { 
   display: flex;
   padding: 0px;
+  margin-left: 93px;
 }
 
 .nav-menu-list .nav-link{
@@ -131,7 +131,6 @@ ul {
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
-  margin-right: 93px;
   /* identical to box height */
 
 }
@@ -183,6 +182,13 @@ ul {
 
 .active-link {
   color: var(--accent-color);
+}
+.navigation-list {
+  
+}
+
+.navigation-list .list {
+  text-align: center;
 }
 /*==============END HEADER================*/
 
@@ -263,7 +269,8 @@ background-color: var(--secondary-button-bgc);
 
 .filters {
   padding-top: 94px;
-    padding-bottom: 94px;} 
+  padding-bottom: 94px;
+  } 
 
 /*==============END HERO================*/
 
@@ -299,6 +306,7 @@ margin-bottom: 10px;
   font-weight: 400;
   color: var(--dark-gray-color);
   text-align: center;
+  margin-bottom: 16px;
 }
 .about { padding-bottom: 94px;
 }
@@ -310,6 +318,7 @@ margin-bottom: 10px;
   justify-content: center;
   padding-top: 47px;
   margin-bottom: 50px;
+  padding: 0;
 }
 
 .filters.list .list-item:not(:last-child) {
@@ -419,8 +428,7 @@ margin-bottom: 10px;
 }
 
 .name-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.2;
@@ -428,6 +436,59 @@ margin-bottom: 10px;
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+.name-card .icon-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.name-card .list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.name-card .icon-link:hover,
+.name-card .icon-link:focus {
+  background-color: var(--accent-color);
+}
+
+.name-card .icon-link:hover svg,
+.name-card .icon-link:focus svg {
+  fill: var(--white-color);
+}
+
+/*==============CLIENTS======================*/
+
+.client-item {
+  flex-basis: calc(100% / 6 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  border: 1px solid var(--icons-default-color);
+  border-radius: 4px;
+}
+
+.client-item .icon-link {
+  height: 90px;
+}
+
+.client-item .icon-link:hover,
+.client-item .icon-link:focus {
+  fill: var(--accent-color);
+}
+
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--accent-color);
+}
+
+.client-list {
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+/*==============END CLIENTS==================*/
 
 /*=============FOOTER================*/
 .footer-address-link {
@@ -449,6 +510,7 @@ background: var(--dark-graylish-blue-color);
 }
 .footer-bg .container {
   padding-top: 0px;
+  display: flex;
 }
 
 .footer-nav {
@@ -461,6 +523,44 @@ background: var(--dark-graylish-blue-color);
 .footer-nav > .nav-menu-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
+
+.come-on {
+  margin-left: 70px;
+  padding-top: 12px;
+  width: 206px;
+}
+
+
+.come-on .icon-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--white-color);
+}
+
+.come-on .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.come-on .icon-link:hover,
+.come-on .icon-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-bg h2 {
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+
+  color: var(--white-color);
+}
+
 
 /*=============END FOOTER================*/
 
@@ -481,6 +581,9 @@ background: var(--dark-graylish-blue-color);
 .filter-btn:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .product-item {
   font-size: 16px;
@@ -507,4 +610,15 @@ background: var(--dark-graylish-blue-color);
 }
 .tr-link {
   color: var(--transparent-white-color);
+}
+
+.card-project:hover,
+.card-project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.item-third .name-card {
+  text-align: left;
+  padding: 20px 24px;
 }
