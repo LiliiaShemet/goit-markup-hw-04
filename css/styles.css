@@ -9,6 +9,7 @@
   --transparent-white-color: rgba(255, 255, 255, 0.6);
   --background-color: #f5f4fa;
   --secondary-button-bgc: #188ce8;
+  --icons-color: #afb1b8;
 
   --card-set-gap: 30px;
 
@@ -32,6 +33,12 @@ background-color: var(--white-color);
 img {
   display: block;
   height: auto;
+}
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icons-color);
 }
 
 h1,
@@ -153,7 +160,12 @@ ul {
 
 .nav-contact-link {
   color: var(--dark-gray-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  fill: var(--dark-gray-color);
 }
+
+
 .active-link {
   color: var(--accent-color);
 }
