@@ -167,6 +167,10 @@ ul {
   fill: var(--dark-gray-color);
 }
 
+.nav-contact-link svg {
+  margin-right: 10px;
+}
+
 .nav-contact-link svg:hover,
 .nav-contact-link svg:focus {
   color: var(--accent-color);
