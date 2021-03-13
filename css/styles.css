@@ -34,12 +34,6 @@ img {
   display: block;
   height: auto;
 }
-.icon-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: var(--icons-color);
-}
 
 h1,
 h2,
