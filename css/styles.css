@@ -41,6 +41,8 @@ img {
   fill: var(--icons-color);
 }
 
+
+
 h1,
 h2,
 h3,
@@ -165,6 +167,10 @@ ul {
   fill: var(--dark-gray-color);
 }
 
+.nav-contact-link svg:hover,
+.nav-contact-link svg:focus {
+  color: var(--accent-color);
+}
 
 .active-link {
   color: var(--accent-color);
